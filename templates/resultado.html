@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="/static/css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Resultado</h2>
+
+        <!-- Ejercicio 1 -->
+        {% if promedio is defined %}
+            <p>Promedio: {{ promedio|round(2) }}</p>
+            <p>Estado: {{ estado }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 2 -->
+        {% if nombre is defined %}
+            <p>Nombre más largo: {{ nombre }}</p>
+            <p>Cantidad de caracteres: {{ longitud }}</p>
+        {% endif %}
+
+        <a href="/">Volver al Menú</a>
+    </div>
+</body>
+</html>
