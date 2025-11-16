@@ -9,16 +9,22 @@ def index():
 @app.route('/ejercicio1', methods=['GET', 'POST'])
 def ejercicio1():
     if request.method == 'POST':
-        nota1 = float(request.form['nota1'])
-        nota2 = float(request.form['nota2'])
-        nota3 = float(request.form['nota3'])
+        nota1 = int(request.form['nota1'])
+        nota2 = int(request.form['nota2'])
+        nota3 = int(request.form['nota3'])
         asistencia = int(request.form['asistencia'])
 
         promedio = (nota1 + nota2 + nota3) / 3
-        estado = "Aprobado" if promedio >= 4.0 and asistencia >= 75 else "Reprobado"
+
+        # Condiciones: promedio >= 40 y asistencia >= 75
+        if promedio >= 40 and asistencia >= 75:
+            estado = "Aprobado"
+        else:
+            estado = "Reprobado"
 
         return render_template('resultado.html', promedio=promedio, estado=estado)
     return render_template('ejercicio1.html')
+
 
 @app.route('/ejercicio2', methods=['GET', 'POST'])
 def ejercicio2():
