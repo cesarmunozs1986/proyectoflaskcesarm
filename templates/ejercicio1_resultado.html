@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado Ejercicio 1</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Resultado de la Compra</h2>
+    <p><strong>Nombre:</strong> {{ nombre }}</p>
+    <p><strong>Edad:</strong> {{ edad }}</p>
+    <p><strong>Tarros:</strong> {{ tarros }}</p>
+    <p><strong>Precio por tarro:</strong> ${{ precio_por_tarro }}</p>
+    <p><strong>Total sin descuento:</strong> ${{ total_sin_descuento }}</p>
+    <p><strong>Descuento aplicado:</strong> {{ descuento_pct }}%</p>
+    <p><strong>Monto descontado:</strong> ${{ monto_descuento }}</p>
+    <p><strong>Total a pagar:</strong> ${{ total_con_descuento }}</p>
+    <div class="button-row">
+      <a href="/ejercicio1" class="btn btn-secondary">Nuevo cálculo</a>
+      <a href="/" class="btn btn-link">Volver al menú</a>
+    </div>
+  </div>
+</body>
+</html>
